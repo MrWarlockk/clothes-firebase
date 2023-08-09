@@ -1,15 +1,30 @@
 import Link from "next/link";
-import styles from "../styles/index.module.css";
+import styles from "../styles/register.module.css";
 import classNames from "classnames";
 import Sidebar from "@component/components/sidebar";
 import Sidebar_small from "@component/components/sidebar_small";
-import { useEffect } from "react";
-import initFirebase from "@component/firebase/initfirebase";
-import { writeUserData } from "@component/firebase/initfirebase";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 function Home() {
-  initFirebase();
-  writeUserData(2, "mciej", "miej@gmail.com", null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState("");
+  const router = useRouter();
+
+  useEffect(() => {
+    setEmail("");
+    setPassword("");
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    router.push({
+      pathname: "/api/clothes/register",
+      query: { email, password, password2 },
+    });
+  };
+
   return (
     <>
       {/* BACKGROUND */}
@@ -82,45 +97,53 @@ function Home() {
       <div className={styles.background_down_line}></div>
       <div className={styles.background_right_line}></div>
       {/* MAIN CONTENT */}
-      <div className={styles.flexbox_main}>
-        <div className={styles.flexbox_main_img}>
-          <img src="index/your_personal_wardrobe.svg" alt="main_image"></img>
-        </div>
-        <div className={styles.flexbox_main_text}>
-          <p>
-            Add your own images to your own personal cupboard!
-            <br></br>
-            Design your own outfits and save them later!
-            <br></br>
-            Never feel the need to think about what to wear ever again!
-          </p>
-        </div>
-      </div>
-      <div className={styles.flexbox_login}>
-        <div
+
+      <form onSubmit={handleSubmit} className={styles.flexbox_login}>
+        <label
           className={classNames(
             styles.flexbox_login_item,
             styles.flexbox_login_email
           )}
         >
-          E-MAIL
-        </div>
-        <div
+          <input
+            type="text"
+            placeholder="E-MAIL"
+            onChange={(e) => setEmail(e.target.value)}
+          ></input>
+        </label>
+        <label
           className={classNames(
             styles.flexbox_login_item,
             styles.flexbox_login_password
           )}
         >
-          PASSWORD
-        </div>
-        <div
+          <input
+            type="password"
+            placeholder="PASSWORD"
+            onChange={(e) => setPassword(e.target.value)}
+          ></input>
+        </label>
+        <label
+          className={classNames(
+            styles.flexbox_login_item,
+            styles.flexbox_login_password
+          )}
+        >
+          <input
+            type="password"
+            placeholder="CONFIRM PASSWORD"
+            onChange={(e) => setPassword2(e.target.value)}
+          ></input>
+        </label>
+        <button
+          type="sumbit"
           className={classNames(
             styles.flexbox_login_item,
             styles.flexbox_login_log_in
           )}
         >
-          LOG IN
-        </div>
+          REGISTER
+        </button>
         <div
           className={classNames(
             styles.flexbox_login_item,
@@ -129,28 +152,23 @@ function Home() {
         >
           Forgot your password?
         </div>
-        <Link
+        <div
           className={classNames(
             styles.flexbox_login_item,
             styles.flexbox_login_text2
           )}
-          href={"/register"}
         >
           Join Here
-        </Link>
-      </div>
+        </div>
+      </form>
       <div className={styles.images}>
-        <img
-          className={styles.image_left}
-          src="index/login_img1.png"
-          alt="clothes_image1"
-        ></img>
         <div className={styles.images_middle}>
           <img
             className={styles.image_middle1}
             src="index/login_img2.png"
             alt="clothes_image2"
           ></img>
+
           <img
             className={styles.image_middle2}
             src="index/login_img3.png"

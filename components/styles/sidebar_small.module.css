@@ -1,0 +1,212 @@
+.sidebar {
+  width: 0vw;
+  height: 0px;
+}
+.sidebar_logout img {
+  width: 0px;
+  height: 0px;
+}
+.sidebar {
+  position: fixed;
+  display: flex;
+  transform: translate(-50%, -50%);
+  bottom: -30px;
+  left: 50%;
+  align-items: center;
+  background-color: #f98770;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.sidebar_link {
+  cursor: default;
+}
+
+.sidebar_menu {
+  padding-top: 1.4vh;
+  margin-top: 0.6vh;
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+  margin-right: 2vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.sidebar_menu:hover {
+  filter: brightness(80%);
+}
+.sidebar_menu_on {
+  background-color: white;
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+.sidebar_menu_on:hover {
+  filter: brightness(100%);
+}
+.sidebar_menu_on img {
+  filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
+    brightness(97%) contrast(102%);
+}
+.sidebar_clothes {
+  padding-top: 1.8vh;
+  margin-top: 0.2vh;
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+  margin-right: 2vw;
+  margin-left: 1vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  cursor: pointer;
+}
+.sidebar_clothes:hover {
+  filter: brightness(80%);
+}
+.sidebar_clothes_on {
+  background-color: white;
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+.sidebar_clothes_on:hover {
+  filter: brightness(100%);
+}
+.sidebar_clothes_on img {
+  filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
+    brightness(97%) contrast(102%);
+}
+.sidebar_cupboard {
+  padding-top: 0.9vh;
+  margin-top: 1.1vh;
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+  margin-right: 2vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  cursor: pointer;
+}
+.sidebar_cupboard:hover {
+  filter: brightness(80%);
+}
+.sidebar_cupboard_on {
+  background-color: white;
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+.sidebar_cupboard_on:hover {
+  filter: brightness(100%);
+}
+.sidebar_cupboard_on img {
+  filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
+    brightness(97%) contrast(102%);
+}
+.sidebar_account {
+  padding-top: 1.4vh;
+  margin-top: 0.6vh;
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+  margin-right: 2vw;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  cursor: pointer;
+}
+.sidebar_account:hover {
+  filter: brightness(80%);
+}
+.sidebar_account_on {
+  background-color: white;
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+.sidebar_account_on:hover {
+  filter: brightness(100%);
+}
+.sidebar_account_on img {
+  filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
+    brightness(97%) contrast(102%);
+}
+.sidebar_logout {
+  position: fixed;
+  right: 30px;
+  bottom: 8%;
+  transform: translate(-50%-50%);
+  cursor: pointer;
+  width: 30px;
+  height: 40px;
+}
+.sidebar_logout:hover {
+  filter: brightness(80%);
+}
+.sidebar-item.selected {
+  background-color: #06788f;
+  margin-left: 0;
+  padding-left: 8.75%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: inset 0px 5px 5px -5px rgba(255, 255, 255, 0.2),
+    inset -5px 0px 5px -5px rgba(255, 255, 255, 0.2),
+    inset 0px -5px 5px -5px rgba(255, 255, 255, 0.2);
+  filter: invert(100%);
+  cursor: inherit;
+}
+@media (max-width: 1080px) {
+  .sidebar {
+    width: 87vw;
+    height: 60px;
+  }
+  #sidebar_hide {
+    width: 0px;
+    height: 0px;
+  }
+  #sidebar_hide div img {
+    width: 0px;
+    height: 0px;
+  }
+  .sidebar_logout img {
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-height: 640px) {
+    .sidebar {
+      width: 87vw;
+      height: 40px;
+    }
+    .sidebar img {
+      max-height: 20px;
+    }
+    .sidebar_logout {
+      width: 16px;
+      height: 32px;
+    }
+  }
+  .sidebar_menu_on img {
+    padding-top: 2px;
+  }
+  .sidebar_clothes_on img {
+    padding-top: 2px;
+  }
+  .sidebar_cupboard_on img {
+    padding-top: 2px;
+  }
+  .sidebar_account_on img {
+    padding-top: 2px;
+  }
+}

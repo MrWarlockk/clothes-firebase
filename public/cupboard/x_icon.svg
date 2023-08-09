@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31.302" height="31.302" viewBox="0 0 31.302 31.302">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Union_7" data-name="Union 7" class="cls-1" d="M8.925,19.992V13.208H2.142a2.142,2.142,0,0,1,0-4.284H8.925V2.142a2.142,2.142,0,1,1,4.284,0V8.924h6.783a2.142,2.142,0,0,1,0,4.284H13.209v6.783a2.142,2.142,0,1,1-4.284,0Z" transform="translate(0 15.652) rotate(-45)"/>
+</svg>

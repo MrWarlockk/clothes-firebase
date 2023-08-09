@@ -1,0 +1,196 @@
+.sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 5.35vh;
+  right: 0vw;
+  width: 94px;
+  height: 87vh;
+  padding-top: 2vh;
+  align-items: center;
+  background-color: #f98770;
+  border-top-left-radius: 2vh;
+  border-bottom-left-radius: 2vh;
+}
+.sidebar_link {
+  cursor: default;
+}
+
+.sidebar_menu {
+  margin-bottom: 2.75vh;
+  padding-top: 1.25vh;
+  padding-bottom: 1.25vh;
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  cursor: pointer;
+}
+.sidebar_menu:hover {
+  filter: brightness(80%);
+}
+.sidebar_menu_on {
+  background-color: white;
+  border-top-right-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  box-shadow: inset -5px 5px 5px -5px rgba(0, 0, 0, 0.5);
+  cursor: default;
+  width: 94px;
+}
+.sidebar_menu_on:hover {
+  filter: brightness(100%);
+}
+.sidebar_menu_on img {
+  filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
+    brightness(97%) contrast(102%);
+}
+.sidebar_clothes {
+  margin-bottom: 3.75vh;
+  padding-top: 1.25vh;
+  padding-bottom: 1.25vh;
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  cursor: pointer;
+}
+.sidebar_clothes:hover {
+  filter: brightness(80%);
+}
+.sidebar_clothes_on {
+  background-color: white;
+  border-top-right-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  box-shadow: inset -5px 5px 5px -5px rgba(0, 0, 0, 0.5);
+  cursor: default;
+  width: 94px;
+}
+.sidebar_clothes_on:hover {
+  filter: brightness(100%);
+}
+.sidebar_clothes_on img {
+  filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
+    brightness(97%) contrast(102%);
+}
+.sidebar_cupboard {
+  margin-bottom: 4vh;
+  padding-top: 1.2vh;
+  padding-bottom: 1.2vh;
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  cursor: pointer;
+}
+.sidebar_cupboard:hover {
+  filter: brightness(80%);
+}
+.sidebar_cupboard_on {
+  background-color: white;
+  border-top-right-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  box-shadow: inset -5px 5px 5px -5px rgba(0, 0, 0, 0.5);
+  cursor: default;
+  width: 94px;
+}
+.sidebar_cupboard_on:hover {
+  filter: brightness(100%);
+}
+.sidebar_cupboard_on img {
+  filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
+    brightness(97%) contrast(102%);
+}
+.sidebar_account {
+  margin-bottom: 6vh;
+  padding-top: 1.25vh;
+  padding-bottom: 1.25vh;
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  cursor: pointer;
+}
+.sidebar_account:hover {
+  filter: brightness(80%);
+}
+.sidebar_account_on {
+  background-color: white;
+  border-top-right-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  box-shadow: inset -5px 5px 5px -5px rgba(0, 0, 0, 0.5);
+  cursor: default;
+  width: 94px;
+}
+.sidebar_account_on:hover {
+  filter: brightness(100%);
+}
+.sidebar_account_on img {
+  filter: invert(14%) sepia(31%) saturate(5595%) hue-rotate(311deg)
+    brightness(97%) contrast(102%);
+}
+.sidebar_logout {
+  position: fixed;
+  right: 30px;
+  bottom: 8%;
+  transform: translate(-50%-50%);
+  cursor: pointer;
+}
+.sidebar_logout:hover {
+  filter: brightness(80%);
+}
+.sidebar-item.selected {
+  background-color: #06788f;
+  margin-left: 0;
+  padding-left: 8.75%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: inset 0px 5px 5px -5px rgba(255, 255, 255, 0.2),
+    inset -5px 0px 5px -5px rgba(255, 255, 255, 0.2),
+    inset 0px -5px 5px -5px rgba(255, 255, 255, 0.2);
+  filter: invert(100%);
+  cursor: inherit;
+}
+@media (max-width: 1080px) {
+  .sidebar {
+    width: 87vw;
+    height: 60px;
+  }
+  #sidebar_hide {
+    width: 0px;
+    height: 0px;
+  }
+  #sidebar_hide div img {
+    width: 0px;
+    height: 0px;
+  }
+  .sidebar_menu_on {
+    width: 0px;
+  }
+  .sidebar_clothes_on {
+    width: 0px;
+  }
+  .sidebar_cupboard_on {
+    width: 0px;
+  }
+  .sidebar_account_on {
+    width: 0px;
+  }
+
+  @media (max-height: 640px) {
+    .sidebar {
+      width: 87vw;
+      height: 40px;
+    }
+    .sidebar img {
+      max-height: 20px;
+    }
+  }
+  .sidebar_clothes_on img {
+    padding-top: 2px;
+  }
+}
+
+.slide_button {
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
+
+.slide_button.show {
+  transform: translateY(0);
+}

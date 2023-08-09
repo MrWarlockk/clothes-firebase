@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35.465" height="31.282" viewBox="0 0 35.465 31.282">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #f98770;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <path id="Icon_awesome-heart" data-name="Icon awesome-heart" class="cls-1" d="M30.213,4.25a8.937,8.937,0,0,0-12.195.889L16.73,6.465,15.443,5.138A8.936,8.936,0,0,0,3.248,4.25,9.384,9.384,0,0,0,2.6,17.836L15.247,30.894a2.049,2.049,0,0,0,2.96,0L30.853,17.836a9.378,9.378,0,0,0-.64-13.587Z" transform="translate(1.003 -1.244)"/>
+</svg>
