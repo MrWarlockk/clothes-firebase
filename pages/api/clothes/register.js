@@ -118,6 +118,8 @@ export default async function Register(req, res) {
       .json({ message: "Error when trying to connect to the database" });
   }
 }*/
+
+/*
 import db_connect from "./Z_Requirements/db_connect";
 
 export default async function handler(req, res) {
@@ -133,4 +135,31 @@ export default async function handler(req, res) {
     console.error("Error fetching data:", error);
     res.status(500).json({ message: "Error fetching data from the database" });
   }
+}
+*/
+
+import initFirebase from "@component/firebase/initfirebase";
+import { writeUserData } from "@component/firebase/initfirebase";
+import {
+  query,
+  equalTo,
+  get,
+  getDatabase,
+  orderByChild,
+  ref,
+} from "firebase/database";
+
+export default async function Register({ username }) {
+  initFirebase();
+  //writeUserData(2, "m3ciej", "m3iej@gmail.com", null); //
+  //readUserData(1);
+  const db = getDatabase();
+  const usersRef = ref(db, "users");
+  const usernameQuery = query(
+    usersRef,
+    orderByChild("username"),
+    equalTo(username)
+  );
+  const snapshot = await get(usernameQuery);
+  console.log(snapshot.val());
 }

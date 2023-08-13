@@ -5,11 +5,15 @@ import Sidebar from "@component/components/sidebar";
 import Sidebar_small from "@component/components/sidebar_small";
 import { useEffect } from "react";
 import initFirebase from "@component/firebase/initfirebase";
-import { writeUserData } from "@component/firebase/initfirebase";
+import { writeUserData } from "@component/firebase/firebasedb";
+import { readUserData } from "@component/firebase/firebasedb";
+import Register from "./api/clothes/register";
 
 function Home() {
-  initFirebase();
-  writeUserData(2, "mciej", "miej@gmail.com", null);
+  //initFirebase();
+  //writeUserData(2, "m3ciej", "m3iej@gmail.com", null);
+  // readUserData(1);
+  Register({ username: "m3ciej" });
   return (
     <>
       {/* BACKGROUND */}
