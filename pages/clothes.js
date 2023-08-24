@@ -33,12 +33,22 @@ function Clothes() {
     setIsBlurred(false);
   }
   function FlexboxColors(props) {
-    return (
-      <div
-        className={classNames(styles.flexbox_add_single_color, props.color)}
-      ></div>
-    );
+    return <div className={classNames(props.color)}></div>;
   }
+
+  const [uploadColor, SetUploadColor] = useState("black");
+
+  const changeColor = (color) => {
+    SetUploadColor(color);
+  };
+
+  const [activeColor, setActiveColor] = useState(null);
+
+  const handleActiveColor = (color) => {
+    setActiveColor(color);
+    console.log(color);
+  };
+
   return (
     <>
       <div className={isBlurred ? "blurred" : ""}>
@@ -166,10 +176,7 @@ function Clothes() {
               </div>
             </div>
             <div
-              className={classNames(
-                styles.clothes_menu_type_hoodie,
-                `sidebar-item ${selectedItem === "item2" ? "selected" : ""}`
-              )}
+              className={classNames(styles.clothes_menu_type_hoodie)}
               onClick={() => handleItemClick("item2")}
             >
               <div className={styles.sidebar_container}>
@@ -238,18 +245,116 @@ function Clothes() {
                       <p>COLOR</p>
                     </div>
                     <div className="flexbox_add_clothes_modal_colors">
-                      <FlexboxColors color="flexbox_add_black" />
-                      <FlexboxColors color="flexbox_add_white" />
-                      <FlexboxColors color="flexbox_add_red" />
-                      <FlexboxColors color="flexbox_add_orange" />
-                      <FlexboxColors color="flexbox_add_yellow" />
-                      <FlexboxColors color="flexbox_add_green" />
-                      <FlexboxColors color="flexbox_add_aqua" />
-                      <FlexboxColors color="flexbox_add_blue" />
-                      <FlexboxColors color="flexbox_add_purple" />
-                      <FlexboxColors color="flexbox_add_pink" />
-                      <FlexboxColors color="flexbox_add_brown" />
-                      <FlexboxColors color="flexbox_add_beige" />
+                      <button
+                        className={activeColor === "black" ? "active" : ""}
+                        onClick={() => {
+                          handleActiveColor("black");
+                          changeColor("black");
+                        }}
+                      >
+                        <FlexboxColors color="flexbox_add_black" />
+                      </button>
+                      <button
+                        className={activeColor === "white" ? "active" : ""}
+                        onClick={() => {
+                          handleActiveColor("white");
+                          changeColor("white");
+                        }}
+                      >
+                        <FlexboxColors color="flexbox_add_white" />
+                      </button>
+                      <button
+                        className={activeColor === "red" ? "active" : ""}
+                        onClick={() => {
+                          handleActiveColor("red");
+                          changeColor("red");
+                        }}
+                      >
+                        <FlexboxColors color="flexbox_add_red" />
+                      </button>
+                      <button
+                        className={activeColor === "orange" ? "active" : ""}
+                        onClick={() => {
+                          handleActiveColor("orange");
+                          changeColor("orange");
+                        }}
+                      >
+                        <FlexboxColors color="flexbox_add_orange" />
+                      </button>
+                      <button
+                        className={activeColor === "yellow" ? "active" : ""}
+                        onClick={() => {
+                          handleActiveColor("yellow");
+                          changeColor("yellow");
+                        }}
+                      >
+                        <FlexboxColors color="flexbox_add_yellow" />
+                      </button>
+                      <button
+                        className={activeColor === "green" ? "active" : ""}
+                        onClick={() => {
+                          handleActiveColor("green");
+                          changeColor("green");
+                        }}
+                      >
+                        <FlexboxColors color="flexbox_add_green" />
+                      </button>
+                      <button
+                        className={activeColor === "aqua" ? "active" : ""}
+                        onClick={() => {
+                          handleActiveColor("aqua");
+                          changeColor("aqua");
+                        }}
+                      >
+                        <FlexboxColors color="flexbox_add_aqua" />
+                      </button>
+                      <button
+                        className={activeColor === "blue" ? "active" : ""}
+                        onClick={() => {
+                          handleActiveColor("blue");
+                          changeColor("blue");
+                        }}
+                      >
+                        <FlexboxColors color="flexbox_add_blue" />
+                      </button>
+                      <button
+                        className={activeColor === "purple" ? "active" : ""}
+                        onClick={() => {
+                          handleActiveColor("purple");
+                          changeColor("purple");
+                        }}
+                      >
+                        <FlexboxColors color="flexbox_add_purple" />
+                      </button>
+                      <button
+                        className={activeColor === "pink" ? "active" : ""}
+                        onClick={() => {
+                          handleActiveColor("pink");
+                          changeColor("pink");
+                        }}
+                      >
+                        <FlexboxColors color="flexbox_add_pink" />
+                      </button>
+                      <button
+                        className={activeColor === "brown" ? "active" : ""}
+                        onClick={() => {
+                          handleActiveColor("brown");
+                          changeColor("brown");
+                        }}
+                      >
+                        <FlexboxColors color="flexbox_add_brown" />
+                      </button>
+                      <button
+                        className={classNames(
+                          activeColor === "beige" ? "active" : ""
+                        )}
+                        onClick={() => {
+                          handleActiveColor("beige");
+                          changeColor("beige");
+                        }}
+                      >
+                        <FlexboxColors color="flexbox_add_beige" />
+                      </button>
                     </div>
                   </div>
                   <div className="flexbox_add_clothes_modal_3">

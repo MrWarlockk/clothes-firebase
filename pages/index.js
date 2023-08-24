@@ -11,7 +11,7 @@ import Register from "./api/clothes/register";
 
 function Home() {
   //initFirebase();
-  //writeUserData(2, "m3ciej", "m3iej@gmail.com", null);
+  //writeUserData(2, "m3ciej", "m3iej@gmail.com");
   // readUserData(1);
   Register({ username: "m3ciej" });
   return (

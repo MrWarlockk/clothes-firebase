@@ -194,16 +194,23 @@ body {
   margin-right: 0.5vw;
   align-content: flex-start;
 }
-.flexbox_add_clothes_modal_colors * {
-  height: 3.3vh;
-  width: 1.87vw;
-  margin-top: 0.9vh;
-  margin-left: 0.51vw;
-  margin-right: 0.51vw;
-  margin-bottom: 0.8vh;
-  border-radius: 0.8vh;
+.flexbox_add_clothes_modal_colors button * {
+  height: 30px;
+  width: 30px;
+  border-radius: 7px;
   box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
+.flexbox_add_clothes_modal_colors button {
+  padding: 0px;
+  border-color: transparent;
+  border-style: solid;
+}
+.flexbox_add_clothes_modal_colors button.active {
+  border-style: solid;
+  border-color: grey;
+  border-radius: 10px;
+}
+
 .flexbox_add_black {
   background-color: black;
 }

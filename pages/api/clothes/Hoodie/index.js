@@ -71,3 +71,24 @@ $login_db = null;
 echo json_encode($directories);
 
 }*/
+
+import initFirebase from "@component/firebase/initfirebase";
+import { readUserData } from "@component/firebase/firebasedb";
+
+/*
+export default async function GetHoodies(){
+  initFirebase();
+  try{
+  const db = getDatabase();
+  const username = ref(db, "users/" + userId + "/username");
+  const snapshot = await get(username);
+
+  if (snapshot.exists()){
+    const data = snapshot.val();
+  }
+}
+catch (error){
+
+  }
+}
+*/

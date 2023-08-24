@@ -12,6 +12,7 @@ export default function initFirebase() {
       measurementId: "G-D683CHZ5W9",
       databaseURL:
         "https://clothes-63fc8-default-rtdb.europe-west1.firebasedatabase.app",
+      storageBucket: "gs://clothes-63fc8.appspot.com",
     });
     console.log("Firebase initialized");
   } catch (error) {

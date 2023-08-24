@@ -1,13 +1,12 @@
 import { getDatabase, ref, set, onValue } from "firebase/database";
 
-export function writeUserData(id, username, email, imageUrl) {
+export function writeUserData(id, username, email) {
   try {
     const db = getDatabase();
     set(ref(db, "users/" + id), {
       id: id,
       username: username,
       email: email,
-      profile_picture: imageUrl,
     });
     console.log("Values put into the db correctly");
   } catch (error) {
