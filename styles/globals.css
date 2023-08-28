@@ -298,3 +298,47 @@ body {
   transition: filter 0.05s ease-in-out;
 }
 /* #endregion */
+
+.categories_add_clothes {
+  display: none;
+  position: absolute;
+  width: 20vw;
+  height: 10vh;
+  transform: translate(0px, 69px);
+  background-color: #f2f2f2;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  list-style: none;
+  z-index: 1;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.categories_add_clothes.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flexbox_add_clothes_expand:hover {
+  cursor: pointer;
+}
+.categories_add_clothes li {
+  width: 100%;
+}
+
+.categories_add_clothes li button {
+  width: 100%;
+  height: 2.5vh;
+}
+
+.categories_add_clothes li button.active {
+  filter: brightness(0.8);
+}
+#shoes_add_category {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}

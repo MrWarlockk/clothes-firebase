@@ -49,6 +49,19 @@ function Clothes() {
     console.log(color);
   };
 
+  const [AddDropdownVisible, setAddDropdownVisible] = useState(false);
+
+  const toggleAddDropdown = () => {
+    setAddDropdownVisible(!AddDropdownVisible);
+  };
+
+  const [activeAddCategory, setActiveAddCategory] = useState("CATEGORY");
+
+  const handleActiveAddCategory = (category) => {
+    setActiveAddCategory(category);
+    console.log(category);
+  };
+
   return (
     <>
       <div className={isBlurred ? "blurred" : ""}>
@@ -234,11 +247,74 @@ function Clothes() {
                   </div>
                   <div className="flexbox_add_clothes_category">
                     <p>
-                      CATEGORY
-                      <span className="flexbox_add_clothes_expand">
+                      {activeAddCategory}
+                      <button
+                        className="flexbox_add_clothes_expand"
+                        onClick={toggleAddDropdown}
+                      >
                         &#9661;
-                      </span>
+                        <button></button>{" "}
+                      </button>
                     </p>
+                    <ul
+                      className={`categories_add_clothes ${
+                        AddDropdownVisible ? "show" : ""
+                      }`}
+                    >
+                      <li>
+                        <button
+                          className={
+                            activeAddCategory === "Hoodie" ? "active" : ""
+                          }
+                          onClick={() => {
+                            handleActiveAddCategory("Hoodie");
+                            toggleAddDropdown();
+                          }}
+                        >
+                          Hoodie
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          className={
+                            activeAddCategory === "Shirt" ? "active" : ""
+                          }
+                          onClick={() => {
+                            handleActiveAddCategory("Shirt");
+                            toggleAddDropdown();
+                          }}
+                        >
+                          Shirt
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          className={
+                            activeAddCategory === "Pants" ? "active" : ""
+                          }
+                          onClick={() => {
+                            handleActiveAddCategory("Pants");
+                            toggleAddDropdown();
+                          }}
+                        >
+                          Pants
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          id="shoes_add_category"
+                          className={
+                            activeAddCategory === "Shoes" ? "active" : ""
+                          }
+                          onClick={() => {
+                            handleActiveAddCategory("Shoes");
+                            toggleAddDropdown();
+                          }}
+                        >
+                          Shoes
+                        </button>
+                      </li>
+                    </ul>
                   </div>
                   <div className="flexbox_add_clothes_color_area">
                     <div className="flexbox_add_clothes_color_text">
